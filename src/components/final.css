@@ -1,0 +1,166 @@
+.page__title em {
+    position: relative;
+    color: #7f4156
+}
+
+.page__title em:after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: -15%;
+    background-color: #7f4156
+}
+
+.page--final:after,
+.page--final:before {
+    content: "";
+    width: 100%;
+    position: absolute
+}
+
+.page--final:before {
+    bottom: 0;
+    left: 0;
+    background-color: #be5e7c
+}
+
+.page--final:after {
+    width: 100%;
+    height: 97%;
+    top: 0;
+    left: 0;
+    background-image: url(https://assets.hotellook.com/kandidat/layout/images/men.3bb08.svg);
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat
+}
+
+.page--final .page__content {
+    width: 100%;
+    position: static
+}
+
+.page--final .page__shares {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+@media only screen and (min-width:480px) and (max-width:719px) {
+    .page--final .cloud {
+        display: none
+    }
+    .page--final:before {
+        height: 17.61vw;
+        height: 47.54vw
+    }
+    .page--final:after {
+        background-size: auto 64%;
+        background-position: top
+    }
+    .page--final .page__title {
+        margin-top: -29.93vw
+    }
+    .page--final .page__shares {
+        margin-top: 8.8vw;
+        position: absolute;
+        bottom: 22%;
+        left: 0
+    }
+    .page--final .page__toolbar {
+        top: auto;
+        bottom: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+    .page--final .page__toolbar .logo {
+        width: auto;
+        margin-bottom: 5.28vw
+    }
+}
+
+@media only screen and (max-width:479px) {
+    .page--final .cloud {
+        display: none
+    }
+    .page--final:before {
+        height: 31.25vw;
+        height: 84.38vw
+    }
+    .page--final:after {
+        background-size: auto 64%;
+        background-position: top
+    }
+    .page--final .page__title {
+        margin-top: -53.12vw
+    }
+    .page--final .page__shares {
+        margin-top: 15.63vw;
+        position: absolute;
+        bottom: 22%;
+        left: 0
+    }
+    .page--final .page__toolbar {
+        top: auto;
+        bottom: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+    .page--final .page__toolbar .logo {
+        width: auto;
+        margin-bottom: 9.38vw
+    }
+}
+
+@media only screen and (min-width:960px) and (max-width:1024px) {
+    .page--final:before {
+        height: 8.7vw
+    }
+    .page--final .page__shares {
+        margin-top: 4.35vw
+    }
+}
+
+@media only screen and (min-width:720px) and (max-width:959px) {
+    .page--final:before {
+        height: 13.02vw
+    }
+    .page--final .page__shares {
+        margin-top: 6.51vw
+    }
+}
+
+@media only screen and (min-width:1366px) and (max-width:1599px) {
+    .page--final:before {
+        height: 7.35vw
+    }
+    .page--final .page__shares {
+        margin-top: 3.68vw
+    }
+}
+
+@media only screen and (min-width:1025px) and (max-width:1365px) {
+    .page--final:before {
+        height: 8vw
+    }
+    .page--final .page__shares {
+        margin-top: 4vw
+    }
+}
+
+@media only screen and (min-width:1600px) {
+    .page--final:before {
+        height: 6.67vw
+    }
+    .page--final .page__shares {
+        margin-top: 3.33vw
+    }
+}
