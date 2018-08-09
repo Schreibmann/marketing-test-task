@@ -1,9 +1,10 @@
-##Для запуска: 
+## Для запуска: 
 
 Внести в `backend/db_config` настройки доступа к базе
--npm install
--npm backend/index.js
--npm start
+
+- npm install
+- npm backend/index.js
+- npm start
 
 
 ## Тестовое задание Aviasales Marketing ([full-stack](https://aviasales.recruitee.com/o/fullstack-developer))

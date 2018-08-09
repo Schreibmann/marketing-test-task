@@ -1,22 +1,22 @@
-import { CHECK_USER, UPDATE_USER } from "../actions/types";
+import { CHECK_USER, UPDATE_USER } from '../actions/types';
 
 const initialState = {
   id: null,
   shared: false,
-  email: null
+  email: null,
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case CHECK_USER:
       return {
         ...state,
-        ...action.usr
+        ...action.usr,
       };
     case UPDATE_USER:
       return {
         ...state,
-        ...action.data
+        ...action.data,
       };
     default:
       return state;
