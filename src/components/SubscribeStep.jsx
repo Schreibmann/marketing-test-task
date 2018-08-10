@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { number, func, string } from 'prop-types';
 import { connect } from 'react-redux';
 import { updateUser } from '../actions/appContainerActions';
 
@@ -78,5 +79,11 @@ class SubscribeStep extends Component {
 const mapStateToProps = state => ({
   usrId: state.usr.id,
 });
+
+SubscribeStep.propTypes = {
+  email: string,
+  usrId: number,
+  updateUser: func.isRequired,
+};
 
 export default connect(mapStateToProps, { updateUser })(SubscribeStep);

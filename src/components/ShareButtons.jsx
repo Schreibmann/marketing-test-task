@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { number, func, bool } from 'prop-types';
 import { connect } from 'react-redux';
 import { updateUser } from '../actions/appContainerActions';
 
@@ -12,14 +13,14 @@ class ShareButtons extends Component {
     };
 
     const shareWindow = window.open(links[socialNet], 'Ленин велел делиться', 'width=600,height=400');
-    const {usrId, isActionsPage} = this.props;
+    const { usrId, isActionsPage } = this.props;
 
     if (isActionsPage) {
       const shareChecker = setInterval(() => {
-			    if (shareWindow.closed) {
-			        clearInterval(shareChecker);
-			        this.props.updateUser(usrId, { shared: true });
-			    }
+        if (shareWindow.closed) {
+          clearInterval(shareChecker);
+          this.props.updateUser(usrId, { shared: true });
+        }
       }, 1000);
     }
   }
@@ -35,6 +36,12 @@ class ShareButtons extends Component {
     );
   }
 }
+
+ShareButtons.propTypes = {
+  isActionsPage: bool,
+  usrId: number,
+  updateUser: func.isRequired,
+};
 
 const mapStateToProps = state => ({
   usrId: state.usr.id,
