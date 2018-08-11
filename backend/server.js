@@ -15,9 +15,9 @@ class Application {
 
     const jsonParser = bodyParser.json();
 
-    app.post('/updateuser/:id', jsonParser, this.updateUserHandler.bind(this));
-    app.get('/adduser', this.createUserHandler.bind(this));
-    app.get('/users/:id', this.getUserHandler.bind(this));
+    app.put('/user/:id', jsonParser, this.updateUserHandler.bind(this));
+    app.post('/user', this.createUserHandler.bind(this));
+    app.get('/user/:id', this.getUserHandler.bind(this));
   }
 
   createUserHandler(req, res) {

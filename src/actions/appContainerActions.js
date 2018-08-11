@@ -7,7 +7,13 @@ export const checkUser = () => (dispatch) => {
     // если юзер на странице первый раз или почистил куки
 
     // запрос на создание юзера, в ответе получаем ID и сохраняем в cookie
-    fetch(`${API_PATH}adduser`, { accept: 'application/json' })
+    fetch(`${API_PATH}user`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain',
+        'Content-Type': 'application/json',
+      },
+    })
       .then(res => res.json())
       .then((data) => {
         cookie.save('usrId', data.id, { path: '/' });
@@ -30,7 +36,10 @@ export const checkUser = () => (dispatch) => {
     // запрос шаринга и мыла юзера по ID
     const id = cookie.load('usrId');
 
-    fetch(`${API_PATH}users/${id}`, { accept: 'application/json' })
+    fetch(`${API_PATH}user/${id}`, {
+      method: 'GET',
+      accept: 'application/json',
+    })
       .then(res => res.json())
       .then((data) => {
         dispatch({
@@ -46,8 +55,8 @@ export const checkUser = () => (dispatch) => {
 
 export const updateUser = (id, data) => (dispatch) => {
   (async () => {
-    const response = await fetch(`${API_PATH}updateuser/${id}`, {
-      method: 'POST',
+    const response = await fetch(`${API_PATH}user/${id}`, {
+      method: 'PUT',
       headers: {
         Accept: 'application/json, text/plain',
         'Content-Type': 'application/json',
